@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { styled } from "styled-components";
+import Button from "./Button";
 
 const ControlDiv = styled.div`
   display: flex;
@@ -72,13 +73,11 @@ export default function AuthInputs() {
           />
         </p>
       </ControlDiv>
-      <div className="actions">
+      <div className="actions flex justify-around">
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <button className="button" onClick={handleLogin}>
-          Sign In
-        </button>
+        <Button onClick={handleLogin}>Sign In</Button>
       </div>
     </div>
   );
